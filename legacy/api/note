@@ -1,0 +1,4 @@
+# Cek IP komputer: ipconfig (Windows) atau ifconfig (Linux/Mac)
+# Ganti BASE_URL di RetrofitClient.kt dengan IP lokal Anda
+# Untuk emulator gunakan: 10.0.2.2
+# Untuk device fisik gunakan: IP lokal (misal: 192.168.1.100)
