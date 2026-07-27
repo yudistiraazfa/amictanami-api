@@ -12,15 +12,15 @@ class TanamiSeeder extends Seeder
     {
         $defaultPassword = Hash::make('tanamixxx');
 
-        // 1. Seed Users
-        DB::table('users')->insertOrIgnore([
+        // 1. Seed Users (Upsert so password updates force-overwrite on Railway)
+        DB::table('users')->upsert([
             ['id' => 1, 'nama' => 'Bos Tani', 'email' => 'tanami@bt.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-07-23 23:09:21'],
             ['id' => 2, 'nama' => 'Admin Tanami', 'email' => 'admin@tanami.id', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-01-15 00:00:00'],
             ['id' => 3, 'nama' => 'Test User 2', 'email' => 'test2@example.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 13:55:58', 'updated_at' => '2026-01-15 13:55:58'],
             ['id' => 4, 'nama' => 'Bos', 'email' => 'tanami@bos.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:02:52', 'updated_at' => '2026-07-27 11:20:25'],
             ['id' => 5, 'nama' => 'Aliev', 'email' => 'aliev@pengguna.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:09:37', 'updated_at' => '2026-01-15 14:09:37'],
             ['id' => 6, 'nama' => 'joya perdana', 'email' => 'joya@dev.id', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-06-28 02:49:25', 'updated_at' => '2026-06-28 02:49:25'],
-        ]);
+        ], ['id'], ['nama', 'email', 'password', 'updated_at']);
 
         // 2. Seed Kategori
         DB::table('kategori')->insertOrIgnore([
