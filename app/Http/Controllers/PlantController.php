@@ -18,6 +18,7 @@ class PlantController extends Controller
                 'nama_latin' => $plant->nama_latin,
                 'deskripsi' => $plant->deskripsi,
                 'gambar_url' => $plant->gambar_url,
+                'gambar_full_url' => $plant->gambar_full_url,
                 'kategori_id' => $plant->kategori_id,
                 'nama_kategori' => $plant->category?->nama_kategori,
             ];
@@ -64,6 +65,7 @@ class PlantController extends Controller
                 'nama_latin' => $plant->nama_latin,
                 'deskripsi' => $plant->deskripsi,
                 'gambar_url' => $plant->gambar_url,
+                'gambar_full_url' => $plant->gambar_full_url,
                 'kategori_id' => $plant->kategori_id,
                 'created_at' => $plant->created_at,
                 'updated_at' => $plant->updated_at,
@@ -88,6 +90,7 @@ class PlantController extends Controller
                 'nama_latin' => $plant->nama_latin,
                 'deskripsi' => $plant->deskripsi,
                 'gambar_url' => $plant->gambar_url,
+                'gambar_full_url' => $plant->gambar_full_url,
                 'kategori_id' => $plant->kategori_id,
                 'nama_kategori' => $plant->category?->nama_kategori,
             ];
@@ -116,6 +119,7 @@ class PlantController extends Controller
                 'nama_latin' => $plant->nama_latin,
                 'deskripsi' => $plant->deskripsi,
                 'gambar_url' => $plant->gambar_url,
+                'gambar_full_url' => $plant->gambar_full_url,
                 'kategori_id' => $plant->kategori_id,
                 'nama_kategori' => $plant->category?->nama_kategori,
             ];
@@ -146,6 +150,7 @@ class PlantController extends Controller
             'nama_latin' => $plant->nama_latin,
             'deskripsi' => $plant->deskripsi,
             'gambar_url' => $plant->gambar_url,
+            'gambar_full_url' => $plant->gambar_full_url,
             'kategori_id' => $plant->kategori_id,
             'created_at' => $plant->created_at,
             'updated_at' => $plant->updated_at,

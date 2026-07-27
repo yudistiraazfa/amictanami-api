@@ -16,6 +16,17 @@ class Plant extends Model
         'kategori_id',
     ];
 
+    protected $appends = ['gambar_full_url'];
+
+    public function getGambarFullUrlAttribute()
+    {
+        if (empty($this->gambar_url)) {
+            return null;
+        }
+
+        return url($this->gambar_url);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'kategori_id');
