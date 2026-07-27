@@ -4,19 +4,22 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class TanamiSeeder extends Seeder
 {
     public function run(): void
     {
+        $defaultPassword = Hash::make('tanamixxx');
+
         // 1. Seed Users
         DB::table('users')->insertOrIgnore([
-            ['id' => 1, 'nama' => 'Bos Tani', 'email' => 'tanami@bt.com', 'password' => '$2y$12$nMtafcFo2pzjfLZwNrVOROb..zDbtwevc3USMuBG/QgMOI/N6/0jW', 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-07-23 23:09:21'],
-            ['id' => 2, 'nama' => 'Admin Tanami', 'email' => 'admin@tanami.id', 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-01-15 00:00:00'],
-            ['id' => 3, 'nama' => 'Test User 2', 'email' => 'test2@example.com', 'password' => '$2y$10$iFIdaDE2zznyiPbjMsud5.6Jldh1zytYC1TYZAKH9V0P3Dvk7SjPy', 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 13:55:58', 'updated_at' => '2026-01-15 13:55:58'],
-            ['id' => 4, 'nama' => 'Bos', 'email' => 'tanami@bos.com', 'password' => '$2y$10$yqecwxHFGP7kZ8dGzjTpNOxYA94QgWQCjDIhw7CDfFcWz6gP.lTDy', 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:02:52', 'updated_at' => '2026-07-27 11:20:25'],
-            ['id' => 5, 'nama' => 'Aliev', 'email' => 'aliev@pengguna.com', 'password' => '$2y$10$T/9nVicOnq0oIWkpKPk/4u0rbhj8X9MQAmg.jjmKnyJ8Z.bHi3UOW', 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:09:37', 'updated_at' => '2026-01-15 14:09:37'],
-            ['id' => 6, 'nama' => 'joya perdana', 'email' => 'joya@dev.id', 'password' => '$2y$10$iVsJ9ojSuLU6nHSt9jINQO5AIVOn4BhiklvtE1ovdogP0W24JsVTS', 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-06-28 02:49:25', 'updated_at' => '2026-06-28 02:49:25'],
+            ['id' => 1, 'nama' => 'Bos Tani', 'email' => 'tanami@bt.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-07-23 23:09:21'],
+            ['id' => 2, 'nama' => 'Admin Tanami', 'email' => 'admin@tanami.id', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => '2026-01-15 00:00:00', 'created_at' => '2026-01-15 00:00:00', 'updated_at' => '2026-01-15 00:00:00'],
+            ['id' => 3, 'nama' => 'Test User 2', 'email' => 'test2@example.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 13:55:58', 'updated_at' => '2026-01-15 13:55:58'],
+            ['id' => 4, 'nama' => 'Bos', 'email' => 'tanami@bos.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:02:52', 'updated_at' => '2026-07-27 11:20:25'],
+            ['id' => 5, 'nama' => 'Aliev', 'email' => 'aliev@pengguna.com', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-01-15 14:09:37', 'updated_at' => '2026-01-15 14:09:37'],
+            ['id' => 6, 'nama' => 'joya perdana', 'email' => 'joya@dev.id', 'password' => $defaultPassword, 'token' => null, 'email_verified_at' => null, 'created_at' => '2026-06-28 02:49:25', 'updated_at' => '2026-06-28 02:49:25'],
         ]);
 
         // 2. Seed Kategori
