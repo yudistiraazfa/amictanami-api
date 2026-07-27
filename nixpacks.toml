@@ -8,3 +8,11 @@ cmds = [
 
 [start]
 cmd = "php artisan migrate --force && php artisan db:seed --force && php artisan config:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=$PORT"
+🚀 Yang Perlu Anda Lakukan Sekarang:
+Silakan jalankan perintah ini di terminal untuk meng-push perbaikan ke GitHub:
+
+bash
+git add nixpacks.toml
+git commit -m "fix: update nixpacks config for Railway build"
+git push origin main
+Setelah di-push, Railway akan otomatis memicu build baru dan status deployment Anda akan berubah menjadi Active / Deployment Successful! 🎉
